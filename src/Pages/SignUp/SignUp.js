@@ -1,21 +1,32 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
-const Login = () => {
+const SignUp = () => {
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const handleLogin = (data) => {
+  const handleSignUp = (data) => {
     console.log(data);
   };
   return (
     <div className="h-[800px] flex justify-center items-center">
       <div className="w-96 p-8">
-        <h2 className="text-3xl text-center">Login</h2>
-        <form onSubmit={handleSubmit(handleLogin)}>
+        <h2 className="text-3xl text-center">Sign Up</h2>
+        <form onSubmit={handleSubmit(handleSignUp)}>
+          <div className="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text">Name</span>
+            </label>
+            <input
+              type="text"
+              {...register("name", { required: "Your name is required" })}
+              className="input input-bordered w-full max-w-xs"
+            />
+            {errors.name && <p className="text-red-700">{errors.name?.message}</p>}
+          </div>
           <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Email</span>
@@ -40,16 +51,13 @@ const Login = () => {
               className="input input-bordered w-full max-w-xs"
             />
             {errors.password && <p className="text-red-700">{errors.password?.message}</p>}
-            <label className="label">
-              <span className="label-text">Forget Password</span>
-            </label>
           </div>
-          <input className="btn btn-accent w-full" value="Login" type="submit" />
+          <input className="btn btn-accent w-full" value="Sign Up" type="submit" />
         </form>
         <p>
-          New to Website{" "}
-          <Link className="text-accent" to="/signup">
-            Create new account here
+          Have an account ?{" "}
+          <Link className="text-accent" to="/login">
+            Please login here
           </Link>
         </p>
         <div className="divider"></div>
@@ -59,4 +67,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
