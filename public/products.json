@@ -1,6 +1,6 @@
 [
   {
-    "id": "01",
+    "id": 1,
     "category_name": "Lenovo",
     "name": "Lenovo slim1",
     "picture": "https://www.techlandbd.com/image/cache/catalog/Laptop/Lenovo/IdeaPad-L3/lenovo-ip-l3-core-i3-10th-gen-laptop-1.jpg-500x500.jpg",
@@ -14,7 +14,7 @@
     "description": "Lenovo IdeaPad Slim 3 is officially released on May 19, 2020.The device is an entry-level laptop that comes with a powerful AMD Ryzen 7 4700U Mobile Processor along with discrete AMD Radeon graphics options. It allows you to perform tasks with good speed and multitask without any lags."
   },
   {
-    "id": "02",
+    "id": 2,
     "category_name": "Asus",
     "name": "Asus vivobook1",
     "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLi35Px-5WO-NkD8vEmB4m4RdECdcAe8xT7JoK5nHYpTT3xXRjnlEoJLAbWyMtHmCBbyo&usqp=CAU",
@@ -28,7 +28,7 @@
     "description": "sus VivoBook S15 is a Windows 10 laptop with a 15.60-inch display that has a resolution of 1920x1080 pixels. It is powered by a Core i5 processor and it comes with 8GB of RAM. The Asus VivoBook S15 packs 256GB of SSD storage. Graphics are powered by Nvidia GeForce MX150."
   },
   {
-    "id": "03",
+    "id": 3,
     "category_name": "Dell",
     "name": "Dell inspiration",
     "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgCOKhQSe-vB4qytYLl5PiH3jSZNNgMJjxTEo2BBNnj4ddZflNA06Zfnl6pWcTu9wI-ko&usqp=CAU",
@@ -42,7 +42,7 @@
     "description": "Dell Technologies is one of the largest tech companies in the world, with over 165,000 employees across the globe. Founded by Michael Dell in 1984, the company focuses today on sales of personal computers, network servers, data storage solutions, and software."
   },
   {
-    "id": "01",
+    "id": 1,
     "category_name": "Lenovo",
     "name": "Lenovo slim1",
     "picture": "https://www.techlandbd.com/image/cache/catalog/Laptop/Lenovo/IdeaPad-L3/lenovo-ip-l3-core-i3-10th-gen-laptop-1.jpg-500x500.jpg",
@@ -56,7 +56,7 @@
     "description": "Lenovo IdeaPad Slim 3 is officially released on May 19, 2020.The device is an entry-level laptop that comes with a powerful AMD Ryzen 7 4700U Mobile Processor along with discrete AMD Radeon graphics options. It allows you to perform tasks with good speed and multitask without any lags."
   },
   {
-    "id": "02",
+    "id": 2,
     "category_name": "Asus",
     "name": "Asus vivobook1",
     "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLi35Px-5WO-NkD8vEmB4m4RdECdcAe8xT7JoK5nHYpTT3xXRjnlEoJLAbWyMtHmCBbyo&usqp=CAU",
@@ -70,7 +70,7 @@
     "description": "sus VivoBook S15 is a Windows 10 laptop with a 15.60-inch display that has a resolution of 1920x1080 pixels. It is powered by a Core i5 processor and it comes with 8GB of RAM. The Asus VivoBook S15 packs 256GB of SSD storage. Graphics are powered by Nvidia GeForce MX150."
   },
   {
-    "id": "03",
+    "id": 3,
     "category_name": "Dell",
     "name": "Dell inspiration",
     "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgCOKhQSe-vB4qytYLl5PiH3jSZNNgMJjxTEo2BBNnj4ddZflNA06Zfnl6pWcTu9wI-ko&usqp=CAU",
