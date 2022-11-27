@@ -15,7 +15,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   const handleSignUp = (data) => {
     setSignUpError("");
-    createUser(data.email, data.password)
+    createUser(data.email, data.password, data.category)
       .then((result) => {
         const user = result.user;
         console.log(user);
@@ -25,7 +25,7 @@ const SignUp = () => {
         };
         updateUser(userInfo)
           .then(() => {
-            navigate("/");
+            saveUser(data.name, data.email, data.category);
           })
           .catch((error) => {
             console.log(error);
@@ -33,6 +33,22 @@ const SignUp = () => {
           });
       })
       .catch((error) => console.log(error));
+  };
+
+  const saveUser = (name, email, category) => {
+    const user = { name, email, category };
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        navigate("/");
+      });
   };
   return (
     <div className="h-[800px] flex justify-center items-center">
@@ -75,6 +91,11 @@ const SignUp = () => {
             />
             {errors.password && <p className="text-red-700">{errors.password?.message}</p>}
           </div>
+          <select {...register("category", { required: true })}>
+            <option value="">Select...</option>
+            <option value="Sellers">Sellers</option>
+            <option value="Buyers">Buyers</option>
+          </select>
           <input className="btn btn-accent w-full mt-4" value="Sign Up" type="submit" />
           {signUpError && <p className="text-red-700">{signUpError}</p>}
         </form>
