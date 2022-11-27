@@ -1,7 +1,7 @@
 import React from "react";
 
-const CategorySingleProduct = ({ singleProduct }) => {
-  console.log(singleProduct);
+const CategorySingleProduct = ({ singleProduct, setOrders }) => {
+  //console.log(singleProduct);
   const {
     name,
     picture,
@@ -31,7 +31,9 @@ const CategorySingleProduct = ({ singleProduct }) => {
         <p>Sellers Name: {sellersName}</p>
         <p>Phone: {mobileNumber}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Book Now</button>
+          <label htmlFor="booking-modal" className="btn btn-primary" onClick={() => setOrders(singleProduct)}>
+            Book Now
+          </label>
         </div>
       </div>
     </div>
