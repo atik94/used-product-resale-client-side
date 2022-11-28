@@ -34,7 +34,7 @@ const Navbar = () => {
     </React.Fragment>
   );
   return (
-    <div className="navbar bg-base-100 flex justify-between">
+    <div className="navbar text-base-100 flex justify-between" style={{ backgroundColor: "#312e81" }}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -53,7 +53,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
-          Laptop resail market
+          <span className="text-3xl">Laptop resail market</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

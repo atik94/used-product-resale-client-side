@@ -41,7 +41,7 @@ const AddProducts = () => {
   };
   return (
     <div className="w-96 p-7">
-      <h2 className="text-5xl">add a products</h2>
+      <h2 className="text-5xl">Add a products</h2>
       <form onSubmit={handleSubmit(handleAddProducts)}>
         <div className="form-control w-full max-w-xs">
           <label className="label">
@@ -49,9 +49,10 @@ const AddProducts = () => {
           </label>
           <input
             type="text"
-            {...register("category_name", { required: "Your name is required" })}
+            {...register("category_name", { required: "Category name is required" })}
             className="input input-bordered w-full max-w-xs"
           />
+          {errors.category_name && <p className="text-red-700">{errors.category_name?.message}</p>}
         </div>
         <div className="form-control w-full max-w-xs">
           <label className="label">
@@ -59,7 +60,7 @@ const AddProducts = () => {
           </label>
           <input
             type="text"
-            {...register("name", { required: "Your name is required" })}
+            {...register("name", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
         </div>
@@ -69,7 +70,8 @@ const AddProducts = () => {
           </label>
           <input
             type="text"
-            {...register("picture", { required: "Your name is required" })}
+            placeholder="image url here"
+            {...register("picture", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
         </div>
@@ -79,7 +81,7 @@ const AddProducts = () => {
           </label>
           <input
             type="text"
-            {...register("location", { required: "Your name is required" })}
+            {...register("location", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
         </div>
@@ -89,7 +91,7 @@ const AddProducts = () => {
           </label>
           <input
             type="text"
-            {...register("originalPrice", { required: "Your name is required" })}
+            {...register("originalPrice", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
         </div>
@@ -99,7 +101,7 @@ const AddProducts = () => {
           </label>
           <input
             type="text"
-            {...register("resalePrice", { required: "Your name is required" })}
+            {...register("resalePrice", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
         </div>
@@ -109,7 +111,7 @@ const AddProducts = () => {
           </label>
           <input
             type="text"
-            {...register("yearOfUse", { required: "Your name is required" })}
+            {...register("yearOfUse", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
         </div>
@@ -119,7 +121,7 @@ const AddProducts = () => {
           </label>
           <input
             type="text"
-            {...register("sellersName", { required: "Your name is required" })}
+            {...register("sellersName", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
         </div>
@@ -129,7 +131,7 @@ const AddProducts = () => {
           </label>
           <input
             type="text"
-            {...register("mobileNumber", { required: "Your name is required" })}
+            {...register("mobileNumber", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
           {/* {errors.name && <p className="text-red-700">{errors.name?.message}</p>} */}
@@ -140,10 +142,9 @@ const AddProducts = () => {
           </label>
           <input
             type="text"
-            {...register("description", { required: "Email Address is required" })}
+            {...register("description", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
-          {/* {errors.email && <p className="text-red-700">{errors.email?.message}</p>} */}
         </div>
 
         <select {...register("conditionType", { required: true })}>

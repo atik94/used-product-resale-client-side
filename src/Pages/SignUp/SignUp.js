@@ -11,7 +11,7 @@ const SignUp = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const { createUser, updateUser } = useContext(AuthContext);
+  const { createUser, updateUser, googleSignIn } = useContext(AuthContext);
   const [signUpError, setSignUpError] = useState("");
   const [createdUserEmail, setCreatedUserEmail] = useState("");
   const [token] = useToken(createdUserEmail);
@@ -55,7 +55,15 @@ const SignUp = () => {
         setCreatedUserEmail(email);
       });
   };
-
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate("/");
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <div className="h-[800px] flex justify-center items-center">
       <div className="w-96 p-8">
@@ -112,7 +120,9 @@ const SignUp = () => {
           </Link>
         </p>
         <div className="divider"></div>
-        <button className="btn btn-outline w-full">Google signup</button>
+        <button onClick={handleGoogleSignIn} className="btn btn-outline w-full">
+          Google signup
+        </button>
       </div>
     </div>
   );

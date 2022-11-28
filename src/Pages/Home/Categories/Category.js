@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 const Category = ({ category }) => {
   const { _id, category_name } = category;
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div className="card bg-info shadow-xl">
       <div className="card-body">
         <Link to={`/category/${_id}`}>
-          <p>{category_name}</p>
+          <p className="text-5xl">{category_name} Brands</p>
         </Link>
       </div>
     </div>

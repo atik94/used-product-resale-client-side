@@ -77,7 +77,6 @@ const Login = () => {
           </Link>
         </p>
         <div className="divider"></div>
-        <button className="btn btn-outline w-full">Google signup</button>
       </div>
     </div>
   );
