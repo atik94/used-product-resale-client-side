@@ -20,6 +20,8 @@ const Sellers = () => {
               <th></th>
               <th>Name</th>
               <th>Email</th>
+              <th>Verify</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -28,6 +30,12 @@ const Sellers = () => {
                 <th>{i + 1}</th>
                 <td>{seller.name}</td>
                 <td>{seller.email}</td>
+                <td>
+                  <button className="btn btn-xs btn-primary">Unverified</button>
+                </td>
+                <td>
+                  <button className="btn btn-xs btn-danger">Delete</button>
+                </td>
               </tr>
             ))}
           </tbody>
