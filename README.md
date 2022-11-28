@@ -10,4 +10,4 @@
 
 # Admin Email is: atik@gmail.com
 
-# Admin password is: 123456
+# Admin password is: 12345678
