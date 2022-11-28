@@ -2,10 +2,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../../Layout/DashboardLayout";
 import Main from "../../Layout/Main";
+import AddProducts from "../../Pages/Dashboard/AddProducts/AddProducts";
 import AllUsers from "../../Pages/Dashboard/AllUsers/AllUsers";
 import Buyers from "../../Pages/Dashboard/Buyers/Buyers";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
+import MyProducts from "../../Pages/Dashboard/MyProducts/MyProducts";
 import Sellers from "../../Pages/Dashboard/Sellers/Sellers";
 import Blog from "../../Pages/Home/Blog/Blog";
 import CategoryProducts from "../../Pages/Home/Categories/CategoryProducts";
@@ -61,6 +63,22 @@ const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <AllUsers></AllUsers>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/addproducts",
+        element: (
+          <AdminRoute>
+            <AddProducts></AddProducts>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/myproducts",
+        element: (
+          <AdminRoute>
+            <MyProducts></MyProducts>
           </AdminRoute>
         ),
       },

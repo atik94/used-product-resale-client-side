@@ -10,10 +10,11 @@ const Banner = () => {
           alt=""
         />
         <div>
-          <h1 className="text-5xl font-bold">Box Office News!</h1>
+          <h1 className="text-5xl font-bold">Used laptop are resale here!</h1>
           <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In
-            deleniti eaque aut repudiandae et a id nisi.
+            laptop computer, sometimes called a notebook computer by manufacturers, is a battery- or AC-powered personal
+            computer generally smaller than a briefcase that can easily be transported and conveniently used in
+            temporary spaces such as on airplanes, in libraries, temporary offices, and at meetings.
           </p>
           <button className="btn btn-primary">Get Started</button>
         </div>
