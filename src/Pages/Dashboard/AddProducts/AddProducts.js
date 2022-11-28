@@ -11,7 +11,6 @@ const AddProducts = () => {
   } = useForm();
   const navigate = useNavigate();
   const handleAddProducts = (data) => {
-    console.log(data);
     const addProducts = {
       category_name: data.category_name,
       name: data.name,
@@ -34,13 +33,12 @@ const AddProducts = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
         toast.success("products added successfully");
         navigate("/dashboard/myProducts");
       });
   };
   return (
-    <div className="w-96 p-7">
+    <div className="w-96 p-7 mx-auto">
       <h2 className="text-5xl">Add a products</h2>
       <form onSubmit={handleSubmit(handleAddProducts)}>
         <div className="form-control w-full max-w-xs">
@@ -134,7 +132,6 @@ const AddProducts = () => {
             {...register("mobileNumber", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
-          {/* {errors.name && <p className="text-red-700">{errors.name?.message}</p>} */}
         </div>
         <div className="form-control w-full max-w-xs">
           <label className="label">
